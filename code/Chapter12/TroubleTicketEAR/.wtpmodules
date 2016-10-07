@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId">
+    <wb-module deploy-name="TroubleTicketEAR">
+        <module-type module-type-id="jst.ear">
+            <version>1.4</version>
+        </module-type>
+        <wb-resource source-path="/TroubleTicketEAR" deploy-path="/"/>
+        <wb-resource deploy-path="/META-INF/application.xml" source-path="TroubleTicketEAR/META-INF/application.xml"/>
+        <wb-resource deploy-path="/META-INF" source-path="TroubleTicketEAR/META-INF"/>
+        <dependent-module deploy-path="/" handle="module:/resource/TroubleTicket/TroubleTicket">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/resource/TroubleTicketClient/TroubleTicketClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/resource/TroubleTicket/ticketWeb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/resource/TroubleTicket/ticketWeb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
+

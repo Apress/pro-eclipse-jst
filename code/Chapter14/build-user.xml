@@ -1,0 +1,15 @@
+<property name="JBoss.serverHome" location="c:/devl/jboss-4.0.1sp1/server/default" />
+<target name="help">
+    <echo message="Please run: $ ant -v -projecthelp"/>
+</target>
+
+<target name="cleanAll">
+    <antcall target="clean"/>
+    <delete includeEmptyDirs="true">
+      <fileset dir="${JBoss.serverHome}">
+        <include name="**/log/**"/>
+        <include name="**/tmp/**"/>
+        <include name="**/work/**"/>
+      </fileset>
+    </delete>
+</target>

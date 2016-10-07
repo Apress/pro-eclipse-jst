@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId">
+    <wb-module deploy-name="TroubleTicketClient">
+        <module-type module-type-id="jst.utility">
+            <property name="java-output-path" value="/bin/"/>
+        </module-type>
+        <wb-resource source-path="/ejbModule" deploy-path="/"/>
+        <wb-resource source-path="/META-INF" deploy-path="/META-INF"/>
+    </wb-module>
+</project-modules>
+

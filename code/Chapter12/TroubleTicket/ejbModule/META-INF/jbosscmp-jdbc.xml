@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jbosscmp-jdbc PUBLIC "-//JBoss//DTD JBOSSCMP-JDBC 4.0//EN" "http://www.jboss.org/j2ee/dtd/jbosscmp-jdbc_4_0.dtd">
+
+<jbosscmp-jdbc>
+   <defaults>
+   </defaults>
+
+   <enterprise-beans>
+
+     <!--
+       To add beans that you have deployment descriptor info for, add
+       a file to your XDoclet merge directory called jbosscmp-jdbc-beans.xml
+       that contains the <entity></entity> markup for those beans.
+     -->
+
+      <entity>
+         <ejb-name>Ticket</ejb-name>
+		 <datasource>java:/jdbc/ticket</datasource>
+		 <datasource-mapping>Derby</datasource-mapping>
+         <create-table>false</create-table>
+         <remove-table>false</remove-table>
+
+         <table-name>TICKET</table-name>
+
+         <cmp-field>
+            <field-name>id</field-name>
+            <column-name>ID</column-name>
+
+        </cmp-field>
+         <cmp-field>
+            <field-name>summary</field-name>
+            <column-name>SUMMARY</column-name>
+
+        </cmp-field>
+         <cmp-field>
+            <field-name>detail</field-name>
+            <column-name>DETAIL</column-name>
+
+        </cmp-field>
+         <cmp-field>
+            <field-name>email</field-name>
+            <column-name>EMAIL</column-name>
+
+        </cmp-field>
+         <cmp-field>
+            <field-name>submitted</field-name>
+            <column-name>SUBMITTED</column-name>
+
+        </cmp-field>
+         <cmp-field>
+            <field-name>lastModified</field-name>
+            <column-name>LASTMODIFIED</column-name>
+
+        </cmp-field>
+
+	<unknown-pk>
+		<unknown-pk-class>java.lang.Integer</unknown-pk-class>
+		<read-only>true</read-only>
+		<column-name>ID</column-name>
+		<auto-increment/>
+	</unknown-pk>
+	<entity-command name="get-generated-keys" class="org.jboss.ejb.plugins.cmp.jdbc.keygen.JDBC30GeneratedKeysCreateCommand">
+	</entity-command>
+<!-- jboss 3.2 features -->
+<!-- optimistic locking does not express the exclusions needed -->
+      </entity>
+
+   </enterprise-beans>
+
+</jbosscmp-jdbc>

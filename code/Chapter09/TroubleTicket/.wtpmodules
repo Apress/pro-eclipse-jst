@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId">
+    <wb-module deploy-name="TroubleTicket">
+        <module-type module-type-id="jst.ejb">
+            <version>2.1</version>
+            <property name="java-output-path" value="/bin/"/>
+        </module-type>
+        <wb-resource source-path="/ejbModule" deploy-path="/"/>
+        <dependent-module deploy-path="/" handle="module:/resource/TroubleTicketClient/TroubleTicketClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
+

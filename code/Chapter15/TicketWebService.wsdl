@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ticket.projst.com.ws"
+    xmlns:apachesoap="http://xml.apache.org/xml-soap"
+    xmlns:impl="http://ws.ticket.projst.com/wsdl/TicketWebService.wsdl"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:tns1="http://ticket.projst.com.dto"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://ticket.projst.com.ws">
+    <wsdl:types>
+        <schema targetNamespace="http://ticket.projst.com"
+            xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+            xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+            <complexType name="Ticket">
+                <sequence>
+                    <element name="detail" nillable="true" type="xsd:string" />
+                    <element name="email" nillable="true" type="xsd:string" />
+                    <element name="lastModifedDate" nillable="true"
+                                    type="xsd:dateTime" />
+                    <element name="oid" type="xsd:long" />
+                    <element name="submittedDate" nillable="true"
+                                    type="xsd:dateTime" />
+                    <element name="summary" nillable="true" type="xsd:string" />
+                </sequence>
+            </complexType>
+        </schema>
+        <schema targetNamespace="http://ws.ticket.projst.com"
+            xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+            xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+            <complexType name="ArrayOf_tns1_Ticket">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType"
+                                        wsdl:arrayType="tns1:Ticket[]" />
+                    </restriction>
+                </complexContent>
+            </complexType>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="getTicketsRequest">
+        <wsdl:part name="status" type="xsd:string" />
+    </wsdl:message>
+    <wsdl:message name="getTicketsResponse">
+        <wsdl:part name="getTicketsReturn" type="tns1:ArrayOf_tns1_Ticket" />
+    </wsdl:message>
+    <wsdl:message name="getTicketRequest">
+        <wsdl:part name="id" type="xsd:int" />
+    </wsdl:message>
+    <wsdl:message name="getTicketResponse">
+        <wsdl:part name="getTicketReturn" type="tns1:Ticket" />
+    </wsdl:message>
+    <wsdl:portType name="TicketWebService">
+        <wsdl:operation name="getTickets" parameterOrder="status">
+            <wsdl:input message="impl:getTicketsRequest"
+                               name="getTicketsRequest" />
+            <wsdl:output message="impl:getTicketsResponse"
+                                 name="getTicketsResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="getTicket" parameterOrder="id">
+            <wsdl:input message="impl:getTicketRequest" name="getTicketRequest" />
+            <wsdl:output message="impl:getTicketResponse"
+                                  name="getTicketResponse" />
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="TicketWebServiceSoapBinding"
+        type="impl:TicketWebService">
+        <wsdlsoap:binding style="rpc"
+                          transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="getTickets">
+            <wsdlsoap:operation soapAction="" />
+            <wsdl:input name="getTicketsRequest">
+                <wsdlsoap:body
+                    encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+                    namespace="http://ws.ticket.projst.com" use="encoded" />
+            </wsdl:input>
+            <wsdl:output name="getTicketsResponse">
+                <wsdlsoap:body
+                    encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+                    namespace="http://ws.ticket.projst.com" use="encoded" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTicket">
+            <wsdlsoap:operation soapAction="" />
+            <wsdl:input name="getTicketRequest">
+                <wsdlsoap:body
+                    encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+                    namespace="http://ws.ticket.projst.com" use="encoded" />
+            </wsdl:input>
+            <wsdl:output name="getTicketResponse">
+                <wsdlsoap:body
+                    encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+                    namespace="http://ws.ticket.projst.com" use="encoded" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="TicketWebServiceService">
+        <wsdl:port binding="impl:TicketWebServiceSoapBinding"
+                         name="TicketWebService">
+           <wsdlsoap:address
+            location="http://localhost:8080/ticketWeb/services/TicketWebService" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

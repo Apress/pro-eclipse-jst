@@ -1,0 +1,13 @@
+<taglib>
+  <taglib-uri>struts-bean</taglib-uri>
+  <taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+</taglib>
+<taglib>
+  <taglib-uri>struts-html</taglib-uri>
+  <taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+</taglib>
+<taglib>
+  <taglib-uri>jstl-core</taglib-uri>
+  <taglib-location>/WEB-INF/c.tld</taglib-location>
+</taglib>
+

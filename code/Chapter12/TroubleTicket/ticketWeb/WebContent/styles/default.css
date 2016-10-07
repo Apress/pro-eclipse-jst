@@ -1,0 +1,217 @@
+body {
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+h1 {font-family: times}
+h1.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+h1.subtitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+h2 {font-family: times}
+p.indent {
+	text-indent: 1cm;
+}
+.header {	font-family: Verdana, Arial, Helvetica, sans-serif;	font-size: 10px; color: #FFFFFF; font-weight: bold;}
+
+.bluewhite { background-color: #0C4A83; color: #FFFFFF }
+a:link {color: #0000CD}
+a:visited {color: #0000CD}
+a:hover {color: #0000CD}
+a:active {color: #0000CD}
+.error { color: red; font-weight: bold; }
+a.error:hover { color: red }
+.message { color: black; font-weight: bold; }
+a.message:hover { color: black;}
+.criticalerror { color:red; font-weight:bold; text-decoration:blink; }
+a.criticalerror:hover { color:red }
+.mainMenu {
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color: #34346B;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 5px;
+	margin: 0px;
+}
+a.mainMenuItem {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.mainMenuItem:hover {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+a.mainMenuItem:visited {
+	color: #FFFFFF;
+}
+a.mainMenuItem:active {
+	color: #FFFFFF;
+}
+.subMenu {
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color: #6D8FC1;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 5px;
+	margin: 0px;
+}
+.menuTitle {
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 1px 5px;
+	margin: 0px;
+}
+
+a.subMenuItem {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.subMenuItem:hover {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+a.subMenuItem:visited {
+	color: #FFFFFF;
+}
+a.subMenuItem:active {
+	color: #FFFFFF;
+}
+a.heading {
+	background-color: #34346B;
+	font-weight: bold;
+  text-decoration: none;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+	text-align: left;
+}
+a.heading:hover {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+a.heading:visited {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+a.heading:active {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.copyright {
+	font-size: 9px;
+	color: #000000;
+	text-align: center;
+}
+.tabSelected {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+.tabUnSelected {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+tr.heading {
+	background-color: #34346B;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+	text-align: left;
+}
+tr.row {
+	color: #000000;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #F0F0F0;
+}
+
+td.gridHi {
+	color: #000000;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+td.gridLo {
+	color: #000000;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #F0F0F0;
+}
+
+tr.add {
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+td.delete {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.format{
+  font-size: 9px;
+}
+.disabledRow{
+  background-color: #AAAAAA;
+  color: #555555;
+}
+
+input  {
+  font-size : 9pt;
+}
+
+button {
+  font-size : 9pt;
+}
+
+select {
+  font-size : 9pt;
+}
+
+textarea {
+  font-size : 8pt;
+  font-family: Arial, Helvetica, Verdana, sans-serif, mono-spaced;
+}
+
+.selectSorterDisabledRow {
+  background-color: #AAAAAA;
+  color: #555555;
+}
+
+.selectSorterSelectFont {
+  font-family: 'Lucida Console',Courier;
+  font-size: 8pt;
+}
+
+.selectSorterSelectFontRJ {
+  font-family: 'Lucida Console',Courier;
+  font-size: 8pt;
+  text-align: right;
+}
+
+.reportMultipleSelect {
+  font-family: 'Lucida Console',Courier;
+  font-size: 10pt;
+  width: 250px;
+}
+

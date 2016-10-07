@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build" name="ticketWeb">
+
+    <property name="ticketWeb.location" value="C:/devl/ticketWeb"/>
+    <path id="project.classpath">
+        <pathelement location=".deployables/ticketWeb/WEB-INF/classes"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/junit.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/jfreechart-1.0.0-rc1.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/commons-validator.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/standard.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/saaj.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/commons-fileupload.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/jakarta-oro.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/gnujaxp.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/jcommon-1.0.0-rc1.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/commons-beanutils.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/commons-logging.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/wsdl4j.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/struts.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/antlr.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/jstl.jar"/>
+        <pathelement location="${ticketWeb.location}/WebContent/WEB-INF/lib/jaxrpc.jar"/>    </path>
+    <target name="init">
+        <mkdir dir=".deployables/ticketWeb/WEB-INF/classes"/>
+    </target>
+    <target name="clean">
+        <delete dir=".deployables/ticketWeb/WEB-INF/classes"/>
+    </target>
+    <target depends="init" name="build">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac destdir=".deployables/ticketWeb/WEB-INF/classes">
+            <src path="JavaSource"/>
+            <classpath refid="project.classpath"/>
+        </javac>
+    </target>
+</project>

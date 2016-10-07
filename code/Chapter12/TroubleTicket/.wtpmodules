@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId">
+    <wb-module deploy-name="TroubleTicket">
+        <module-type module-type-id="jst.ejb">
+            <version>2.1</version>
+            <property name="java-output-path" value="/bin/"/>
+        </module-type>
+        <wb-resource source-path="/ejbModule" deploy-path="/"/>
+        <wb-resource deploy-path="/META-INF/ejb-jar.xml" source-path="ejbModule/META-INF/ejb-jar.xml"/>
+        <dependent-module deploy-path="/" handle="module:/resource/TroubleTicketClient/TroubleTicketClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+    <wb-module deploy-name="ticketWeb">
+        <module-type module-type-id="jst.web">
+            <version>2.4</version>
+            <property name="context-root" value="ticketWeb"/>
+            <property name="java-output-path" value="/bin/ticketWeb/"/>
+        </module-type>
+        <wb-resource source-path="/ticketWeb/JavaSource" deploy-path="/WEB-INF/classes"/>
+        <wb-resource source-path="/ticketWeb/WebContent" deploy-path="/"/>
+        <wb-resource deploy-path="/WEB-INF" source-path="ticketWeb/WebContent/WEB-INF"/>
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="ticketWeb/WebContent/WEB-INF/web.xml"/>
+    </wb-module>
+</project-modules>
+

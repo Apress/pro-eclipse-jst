@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>Retrieve Trouble Tickets</title>
+</head>
+<body>
+  <center>
+    <h2>
+      <u>Chart Trouble Tickets</u>
+    </h2>
+  </center>
+  <br/><br/>
+  <form action="/ChartTickets" method="get">
+  <table>
+     <tr>
+       <td>Include Items:</td>
+       <td><select name="status">
+            <option value="all">Both Open and Closed Tickets</option>
+            <option value="open" selected="selected">Open Tickets</option>
+            <option value="closed">Closed Tickets</option>
+          </select>
+       </td>
+       <td>&nbsp;</td>
+     </tr>
+     <tr>
+       <td>Submitted person email:</td>
+       <td><input name="email" type="text" /></td>
+       <td><i>Leave blank to include all<i></td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td><br/><input type="submit" value="Generate Chart" /></td>
+       <td>&nbsp;</td>
+     </tr>
+   </table>
+  </form>
+</body>
+</html>

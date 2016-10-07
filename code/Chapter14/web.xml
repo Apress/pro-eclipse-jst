@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+
+      <servlet-name>ChartTickets</servlet-name>
+      <display-name>ChartTickets</display-name>
+      <description><![CDATA[Servlet to create a chart of existing trouble tickets]]></description>
+     <servlet-class>com.projst.ticket.web.ChartTickets</servlet-class>
+
+      <init-param>
+         <param-name>status</param-name>
+         <param-value>open</param-value>
+         <description><![CDATA[Ticket type to include in chart]]></description>
+      </init-param>
+   </servlet>
+
+     <servlet-mapping>
+      <servlet-name>ChartTickets</servlet-name>
+      <url-pattern>/ChartTickets</url-pattern>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>view.html</welcome-file>
+  </welcome-file-list>
+
+  <taglib>
+    <taglib-uri>http://jakarta.apache.org/taglibs/application-1.0</taglib-uri>
+    <taglib-location>/WEB-INF/taglibs-application.tld</taglib-location>
+  </taglib>
+</web-app>
